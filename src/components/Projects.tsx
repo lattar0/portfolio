@@ -26,7 +26,7 @@ export function Projects() {
   return (
     <div className='flex flex-col gap-2 ml-4'>
       <div className='flex gap-3'>
-        <span className='text-xl text-yellow-300'>projects:</span>
+        <span className='text-xl text-emerald-600'>projects:</span>
         <span className='text-xl text-yellow-300'>{'[{'}</span>
       </div>
 

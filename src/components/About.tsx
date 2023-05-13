@@ -3,7 +3,7 @@ import { Language } from './Language';
 export function About() {
   return (
     <div className='flex gap-4 ml-4'>
-      <span className='text-xl text-yellow-300'>about:</span>
+      <span className='text-xl text-emerald-500'>about:</span>
       <div className='flex flex-col gap-4 text-lg'>
         <div>
           <p>
