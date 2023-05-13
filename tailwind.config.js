@@ -11,6 +11,18 @@ module.exports = {
         ibm: 'var(--font-ibm)',
         jetbrains: 'var(--font-jetbrains)',
       },
+
+      keyframes: {
+        blink: {
+          '0%': { opacity: 1 },
+          '100%': { opacity: 0 },
+        },
+      },
+
+      animation: {
+        blink: 'blink 700ms infinite alternate',
+      },
+      
     },
   },
   plugins: [],
