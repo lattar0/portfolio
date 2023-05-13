@@ -1,11 +1,12 @@
 interface ProjectProps {
   name: string
   description: string
-  technologies: string[]
+  language: string
   repository: string
+  stars: number
 }
 
-export function Project({ description, name, repository, technologies  }: ProjectProps) {
+export function Project({ description, name, repository, language, stars  }: ProjectProps) {
   return (
     <div className='flex gap-2 flex-col ml-5'>
       <div>
@@ -34,10 +35,18 @@ export function Project({ description, name, repository, technologies  }: Projec
 
       <div>
         <span className='text-xl text-yellow-300'>
-          languages:
+          stars:
         </span>
 
-        <span className='text-xl text-zinc-300 ml-2'>{technologies.join(', ')}</span>
+        <a className='text-xl text-zinc-300 ml-2'>{stars}</a>
+      </div>
+
+      <div>
+        <span className='text-xl text-yellow-300'>
+          language:
+        </span>
+
+        <span className='text-xl text-zinc-300 ml-2'>{language}</span>
       </div>
     </div>
   )

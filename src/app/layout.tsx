@@ -5,7 +5,7 @@ const ibm = IBM_Plex_Mono({ subsets: ['latin'], variable: '--font-ibm', weight: 
 
 export const metadata = {
   title: 'lattaro',
-  description: "joao lattaro's portfolio",
+  description: "joao lattaro's portfolio"
 }
 
 export default function RootLayout({

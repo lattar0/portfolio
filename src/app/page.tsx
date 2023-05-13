@@ -1,4 +1,5 @@
 import { About } from '@/components/About'
+import { Contact } from '@/components/Contact'
 import { Header } from '@/components/Header'
 import { Projects } from '@/components/Projects'
 
@@ -8,7 +9,7 @@ export default function Home() {
 
       <Header />
 
-      <main className='flex gap-10 items-center justify-center mx-auto my-20 max-w-2xl'>
+      <main className='flex gap-10 items-center justify-center mx-auto my-4 max-w-2xl'>
         <div className='flex flex-col gap-3'>
           <div className='flex gap-3'>
             <span className='text-xl text-emerald-600'>const</span>
@@ -20,6 +21,8 @@ export default function Home() {
           <About />
 
           <Projects />
+
+          <Contact />
         </div>
       </main>
     </div>

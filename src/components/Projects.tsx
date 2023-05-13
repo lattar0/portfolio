@@ -1,6 +1,28 @@
+"use client"
+
+import { useEffect, useState } from 'react';
 import { Project } from './Project';
+import { api } from '@/utils/baseUrl';
+
+interface ProjectsProps {
+  name: string
+  description: string
+  language: string
+  html_url: string
+  stargazers_count: number
+}
 
 export function Projects() {
+  const [repositories, setRepositories] = useState<ProjectsProps[]>([])
+
+  useEffect(() => {
+    api.get<ProjectsProps[]>('/repos').then(res => {
+      setRepositories(res.data)
+    })
+  }, [])
+
+  const repositoriesFiltered = repositories.filter((repository) => repository.stargazers_count >= 1)
+
   return (
     <div className='flex flex-col gap-2 ml-4'>
       <div className='flex gap-3'>
@@ -8,7 +30,27 @@ export function Projects() {
         <span className='text-xl text-yellow-300'>{'[{'}</span>
       </div>
 
-      <Project name='Passweird' description="A mobile application that has the purpose of saving passwords for you, just enter the username and password and that's it, it's saved!" repository='https://google.com' technologies={['asdas', 'sadas']}/>
+      <div>
+        {
+          repositoriesFiltered.map((repository, index) => (
+            <>
+              <Project
+                key={index}
+                description={repository.description}
+                name={repository.name}
+                repository={repository.html_url}
+                stars={repository.stargazers_count}
+                language={repository.language}
+              />
+
+              <span className='text-xl text-yellow-300'>{'}'}</span>
+            </>
+          ))
+
+        }
+
+        <span className='text-xl text-yellow-300'>{']'}</span>
+      </div>
     </div>
   )
 }
