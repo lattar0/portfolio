@@ -11,7 +11,7 @@ export function typingEffect(words: string[]) {
       setTimeout(() => deletingEffect(words), 4000)
       return false
     }
-    timer = setTimeout(loopTyping, 500)
+    timer = setTimeout(loopTyping, 300)
   }
   loopTyping()
 }
