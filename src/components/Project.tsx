@@ -35,7 +35,7 @@ export function Project({ description, name, repository, language, stars }: Proj
           repository:
         </span>
 
-        <a href={repository} className='text-xl text-zinc-300 ml-2 hover:underline'>{repository}</a>
+        <a href={repository} target='_blank' className='text-xl text-zinc-300 ml-2 hover:underline'>{repository}</a>
       </div>
 
       <div>
