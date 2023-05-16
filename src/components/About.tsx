@@ -1,9 +1,10 @@
 import { Language } from './Language';
+import { ObjectContainer } from './base/ObjectContainer';
 
 export function About() {
   return (
-    <div className='flex gap-4 ml-4'>
-      <span className='text-xl text-emerald-500'>about:</span>
+    <ObjectContainer isFlexColumn={false}>
+      <span className='text-xl text-emerald-600'>about:</span>
       <div className='flex flex-col gap-4 text-lg'>
         <div>
           <p>
@@ -34,6 +35,6 @@ export function About() {
         </p>
 
       </div>
-    </div>
+    </ObjectContainer>
   )
 }

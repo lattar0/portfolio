@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { Project } from './Project';
 import { api } from '@/utils/baseUrl';
+import { ObjectContainer } from './base/ObjectContainer';
 
 interface ProjectsProps {
   name: string
@@ -24,7 +25,7 @@ export function Projects() {
   const repositoriesFiltered = repositories.filter((repository) => repository.stargazers_count >= 1)
 
   return (
-    <div className='flex flex-col gap-2 ml-4'>
+    <ObjectContainer>
       <div className='flex gap-3'>
         <span className='text-xl text-emerald-600'>projects:</span>
         <span className='text-xl text-yellow-300'>{'[{'}</span>
@@ -51,6 +52,6 @@ export function Projects() {
 
         <span className='text-xl text-yellow-300'>{']'}</span>
       </div>
-    </div>
+    </ObjectContainer>
   )
 }
