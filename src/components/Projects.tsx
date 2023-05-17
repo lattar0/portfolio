@@ -27,8 +27,8 @@ export function Projects() {
   return (
     <ObjectContainer>
       <div className='flex gap-3'>
-        <span className='text-xl text-emerald-600'>projects:</span>
-        <span className='text-xl text-yellow-300'>{'[{'}</span>
+        <span className='md:text-lg text-sm text-emerald-600'>projects:</span>
+        <span className='md:text-lg text-sm text-yellow-300'>{'[{'}</span>
       </div>
 
       <div>
@@ -44,13 +44,13 @@ export function Projects() {
                 language={repository.language}
               />
 
-              <span className='text-xl text-yellow-300'>{'}'}</span>
+              <span className='md:text-lg text-sm text-yellow-300'>{'}'}</span>
             </>
           ))
 
         }
 
-        <span className='text-xl text-yellow-300'>{']'}</span>
+        <span className='md:text-lg text-sm text-yellow-300'>{']'}</span>
       </div>
     </ObjectContainer>
   )

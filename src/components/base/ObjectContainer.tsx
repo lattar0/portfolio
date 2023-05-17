@@ -31,7 +31,7 @@ export function ObjectContainer({ children, isFlexColumn = true }: ObjectContain
       }
       </div>
       
-      <div className={`${isFlexColumn ? 'flex-col' : ''} ${isExpanded ? 'max-h-7' : ''} flex gap-2 ml-4 overflow-hidden`}>
+      <div className={`${isFlexColumn ? 'flex-col' : ''} ${isExpanded ? 'md:max-h-7 max-h-6' : ''} flex gap-2 md:ml-4 overflow-hidden`}>
         {children}
       </div>
     </div>
