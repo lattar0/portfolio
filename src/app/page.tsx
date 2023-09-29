@@ -19,7 +19,7 @@ export default function Home() {
 
       <Header />
 
-      <main className='flex flex-col items-center justify-center max-w-[375px] sm:max-w-xl'>
+      <main className='flex flex-col items-center justify-center max-w- max-w-[375px] sm:max-w-2xl'>
         <div className='flex flex-col gap-3 max-w-full md:max-w-2xl'>
           <div className='flex items-center gap-1'>
             <span className='md:text-xl text-sm text-emerald-600'>const</span>

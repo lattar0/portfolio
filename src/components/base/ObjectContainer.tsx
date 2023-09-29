@@ -10,7 +10,6 @@ export function ObjectContainer({ children, isFlexColumn = true }: ObjectContain
   const [isExpanded, setIsExpanded] = useState(false)
   const [caretSize, setCaretSize] = useState(20)
 
-
   useEffect(() => {
     if (window !== undefined) {
       if (window.innerWidth < 768) {
